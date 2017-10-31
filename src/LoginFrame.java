@@ -42,6 +42,7 @@ public class LoginFrame extends JFrame {
             public void actionPerformed(ActionEvent e) {
 
                 if(jtfID.getText().equals("h304")&&new String(jtfPW.getPassword()).equals("23323456")){
+                    LoginFrame.this.dispose();
 //                    System.out.println("Hello ~ it`s me");
                     MainFrame mfe = new MainFrame(LoginFrame.this);
 //                    MainFrame mfe = new MainFrame();
