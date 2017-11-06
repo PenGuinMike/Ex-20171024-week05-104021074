@@ -213,7 +213,20 @@ public class MainFrame extends JFrame{
                         System.out.println("FileName: "+ inFile.getName());
                         String str = "";
                         while((str = br.readLine()) != null){
-                            jta1.append(str+"\n");
+//                            int x = 5;
+                            String original[] = {"書名:","作者:","出版商:","價格:","類別:"};
+                            String splitString [] = str.split(",");
+                            int splitData = splitString.length;
+                            for(int i=0;i<splitData;i++){
+                                if(i == splitData-1){
+                                    jta1.append(original[i]+splitString[i]+"\n");
+                                    jta1.append("---------------------------------------------------------------"+"\n");
+                                }else{
+                                    jta1.append(original[i]+splitString[i]+"\n");
+                                }
+                            }
+//                                    jta1.append(str+"\n");
+                            System.out.println(splitString[0]);
                         }
                         System.out.println("Read File finished!!!");
                     }catch (Exception ioe){
